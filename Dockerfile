@@ -2,7 +2,7 @@ FROM        quayio/coreos-etcd
 
 VOLUME      /data
 EXPOSE      2379 2380 4001 7001
-ENV HOSNAME
+
 LABEL maintainer="Matt Kimberley <matthew.kimberley@fasthosts.com>" \
     version="0.31"
 
