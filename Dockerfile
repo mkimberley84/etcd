@@ -20,7 +20,7 @@ LABEL maintainer="Matt Kimberley <matthew.kimberley@fasthosts.com>" \
 CMD         /bin/rm -rf /var/lib/etcd2
 CMD         /usr/bin/etcd       -data-dir=/data \
                                 #-name $(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10) \
-                                -name ${NAME}
+                                -name ${NAME} \
                                 -advertise-client-urls http://${ADVERTISE_URL}:2379 \ 
                                 -listen-client-urls http://0.0.0.0:2379 \
                                 #-discovery ${DISCOVERY_TK} \
